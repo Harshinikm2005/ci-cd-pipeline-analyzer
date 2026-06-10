@@ -1,0 +1,7 @@
+Started by user Harshini
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/python-error
+[python-error] $ /bin/sh -xe /tmp/jenkins.sh
++ python -c import requests
+python: not found
+Finished: FAILURE
