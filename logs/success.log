@@ -1,0 +1,7 @@
+Building in workspace /var/jenkins_home/workspace/hello-devops
+[hello-devops] $ /bin/sh -xe /tmp/jenkins.sh
++ echo Hello DevOps
+Hello DevOps
++ date
+Wed Jun 10 07:28:23 UTC 2026
+Finished: SUCCESS
