@@ -47,5 +47,5 @@ print("\nAnalysis Complete")
 print("Category :", category)
 print("Severity :", severity)
 print("Suggestion :", suggestion)
-
+print("Path entered:", repr(log_path))
 conn.close()
