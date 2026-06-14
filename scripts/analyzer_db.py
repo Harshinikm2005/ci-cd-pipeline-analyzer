@@ -2,12 +2,12 @@ import sqlite3
 
 log_file = input("Enter log file path: ")
 
-with open(log_file, "r") as f:
-    log = f.read()
+with open(log_file, "r") as file:
+    log = file.read()
 
 category = "Unknown Error"
 severity = "Low"
-suggestion = "Check logs manually"
+suggestion = "Manual Investigation"
 
 if "Finished: SUCCESS" in log:
     category = "Success"
@@ -19,16 +19,16 @@ elif "python: not found" in log:
     severity = "High"
     suggestion = "Install Python or fix PATH"
 
-elif "can't open file" in log:
-    category = "File Not Found"
-    severity = "Medium"
-    suggestion = "Verify filename and path"
+elif "ModuleNotFoundError" in log:
+    category = "Dependency Error"
+    severity = "High"
+    suggestion = "Install missing package"
 
 conn = sqlite3.connect("database/build_logs.db")
 cursor = conn.cursor()
 
 cursor.execute("""
-CREATE TABLE IF NOT EXISTS build_results (
+CREATE TABLE IF NOT EXISTS build_results(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     category TEXT,
     severity TEXT,
@@ -38,14 +38,11 @@ CREATE TABLE IF NOT EXISTS build_results (
 
 cursor.execute("""
 INSERT INTO build_results(category,severity,suggestion)
-VALUES (?,?,?)
+VALUES(?,?,?)
 """, (category, severity, suggestion))
 
 conn.commit()
 
-print("\nAnalysis Complete")
-print("Category :", category)
-print("Severity :", severity)
-print("Suggestion :", suggestion)
-print("Path entered:", repr(log_path))
+print("\nAnalysis Saved Successfully!")
+
 conn.close()
