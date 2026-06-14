@@ -20,6 +20,14 @@ A DevOps project that analyzes Jenkins build logs, classifies failures, and gene
 - Collected build logs
 - Prepared project structure
 
+## Week 2 Progress
+
+- Built Jenkins log analyzer
+- Implemented automatic error classification
+- Integrated SQLite database
+- Generated build reports
+- Added automated log processing
+
 ## Upcoming Features
 
 - Log Analyzer
