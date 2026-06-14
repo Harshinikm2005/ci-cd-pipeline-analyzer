@@ -1,37 +1,60 @@
-# CI/CD Pipeline Analyzer
 # Smart CI/CD Pipeline Analyzer
 
-A DevOps project that analyzes Jenkins build logs, classifies failures, and generates reports.
+## Project Overview
+
+A DevOps-focused project that automatically analyzes Jenkins build logs, classifies failures, stores results in a database, and generates reports for faster troubleshooting.
 
 ## Technologies Used
 
-- Linux
-- Git & GitHub
-- Docker
-- Jenkins
-- Python
-- SQLite
+* Linux
+* Git & GitHub
+* Docker
+* Jenkins
+* Python
+* SQLite
 
-## Week 1 Progress
+## Features Completed
 
-- Jenkins setup in Docker
-- Created successful and failed jobs
-- Explored Jenkins internal architecture
-- Collected build logs
-- Prepared project structure
+### Week 1
 
-## Week 2 Progress
+* Jenkins setup using Docker
+* Created successful and failed Jenkins jobs
+* Collected Jenkins build logs
+* Explored Jenkins architecture
+* GitHub repository setup
 
-- Built Jenkins log analyzer
-- Implemented automatic error classification
-- Integrated SQLite database
-- Generated build reports
-- Added automated log processing
+### Week 2
 
-## Upcoming Features
+* Log Analyzer
+* Automatic Error Classification
+* Jenkins Log Reader
+* SQLite Database Integration
+* Report Generator
+* Automated Log Processing
 
-- Log Analyzer
-- Error Classification
-- Database Storage
-- Dashboard
-- AI Suggestions
+## Project Architecture
+
+Jenkins Build
+↓
+Build Logs
+↓
+Python Log Analyzer
+↓
+Error Classification
+↓
+SQLite Database
+↓
+Reports & Dashboard
+
+## Future Enhancements
+
+* Streamlit Dashboard
+* AI-Based Fix Suggestions
+* Grafana Visualization
+* Dockerized Application
+* AWS Deployment
+* Email/Telegram Alerts
+
+## Author
+
+Harshini
