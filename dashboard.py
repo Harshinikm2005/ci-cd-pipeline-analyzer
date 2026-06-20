@@ -1,9 +1,12 @@
 import streamlit as st
 import sqlite3
+import pandas as pd
 
 st.title("Smart CI/CD Pipeline Analyzer")
 
 conn = sqlite3.connect("database/build_logs.db")
+
+# Metrics
 cursor = conn.cursor()
 
 cursor.execute("SELECT COUNT(*) FROM build_results")
@@ -25,4 +28,25 @@ with col2:
 with col3:
     st.metric("Failed Builds", failed)
 
+# Table
+st.subheader("Build Records")
+
+df = pd.read_sql_query(
+    "SELECT * FROM build_results",
+    conn
+)
+
+st.dataframe(df)
+st.subheader("Build Summary Chart")
+
+chart_data = {
+    "Status": ["Success", "Failed"],
+    "Count": [success, failed]
+}
+
+chart_df = pd.DataFrame(chart_data)
+
+st.bar_chart(
+    chart_df.set_index("Status")
+)
 conn.close()
