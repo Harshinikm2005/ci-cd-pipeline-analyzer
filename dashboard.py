@@ -36,6 +36,22 @@ df = pd.read_sql_query(
     conn
 )
 
+status_filter = st.selectbox(
+    "Filter Records",
+    ["All", "Success", "Failed"]
+)
+
+if status_filter != "All":
+    df = df[df["category"] == status_filter]
+search = st.text_input(
+    "Search Error Type"
+)
+
+if search:
+    df = df[
+        df["error_type"]
+        .str.contains(search, case=False)
+    ]
 st.dataframe(df)
 st.subheader("Build Summary Chart")
 
