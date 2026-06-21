@@ -39,14 +39,25 @@ A DevOps-focused project that automatically analyzes Jenkins build logs, classif
 * Streamlit Dashboard Setup
 * Database Connectivity with SQLite
 * Build Metrics Dashboard
-
-  * Total Builds
-  * Successful Builds
-  * Failed Builds
+* Total Builds Counter
+* Successful Builds Counter
+* Failed Builds Counter
 * Build Records Table
 * Interactive Data Visualization
 * Dashboard Charts
 * Search and Filter Functionality
+
+### Week 4
+
+* Jenkins Job Automation
+* Automatic Jenkins Build Detection
+* Jenkins Build Log Extraction
+* Automatic Build Status Detection
+* Jenkins Build Results Storage in SQLite
+* Latest Build Processing
+* Multiple Build Processing
+* Dashboard Integration with Jenkins Data
+* Automated Build Monitoring Workflow
 
 ## Project Architecture
 
@@ -78,12 +89,13 @@ Reports & Visualizations
 
 ## Future Enhancements
 
-* Automatic Jenkins Log Import
 * AI-Based Fix Suggestions
+* Failure Trend Analysis
 * Grafana Visualization
 * Dockerized Application
 * AWS Deployment
-* Email/Telegram Alerts
+* Email Alerts
+* Telegram Notifications
 
 ## Author
 
