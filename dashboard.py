@@ -1,8 +1,17 @@
 import streamlit as st
 import sqlite3
 import pandas as pd
+import os
 
-st.set_page_config(page_title="Smart CI/CD Pipeline Analyzer")
+st.sidebar.title("⚙️ Dashboard Menu")
+
+page = st.sidebar.selectbox(
+    "Select View",
+    ["Overview", "Build Records", "Analytics"]
+)
+
+st.title("🚀 Smart CI/CD Pipeline Analyzer")
+st.caption("Automated Jenkins Build Monitoring & Analytics Dashboard")
 
 st.title("🚀 Smart CI/CD Pipeline Analyzer")
 
@@ -25,23 +34,39 @@ col2.metric("Successful Builds", success)
 col3.metric("Failed Builds", failed)
 
 st.divider()
+st.subheader("Build Health")
 
+if failed == 0:
+    st.success("✅ All builds are successful.")
+else:
+    st.warning(f"⚠️ {failed} build(s) need attention.")
 # Table
 st.subheader("Build Records")
-st.dataframe(df, use_container_width=True)
 
-st.divider()
-
+st.dataframe(
+    df,
+    width="stretch",
+    hide_index=True
+)
 # Chart
 st.subheader("Build Category Distribution")
-st.bar_chart(df["category"].value_counts())
+category_counts = df["category"].value_counts()
+
+st.bar_chart(category_counts)
+
+
 st.subheader("Download Report")
 
-with open("reports/build_report.csv", "rb") as file:
-    st.download_button(
-        label="Download CSV Report",
-        data=file,
-        file_name="build_report.csv",
-        mime="text/csv"
-    )
+report_path = "reports/build_report.csv"
+
+if os.path.exists(report_path):
+    with open(report_path, "rb") as file:
+        st.download_button(
+            label="Download CSV Report",
+            data=file,
+            file_name="build_report.csv",
+            mime="text/csv"
+        )
+else:
+    st.info("No report available yet. Run the export_report.py script to generate one.")
 conn.close()
