@@ -1,0 +1,25 @@
+Developer
+    │
+    ▼
+Commit Code
+    │
+    ▼
+Jenkins Build
+    │
+    ▼
+Generate Build Log
+    │
+    ▼
+Analyze Log
+    │
+    ▼
+Classify Result
+    │
+    ▼
+Store in SQLite
+    │
+    ▼
+Display Dashboard
+    │
+    ▼
+Export CSV Report

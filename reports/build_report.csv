@@ -1,0 +1,12 @@
+id,category,severity,suggestion
+1,Environment Error,High,Install Python or fix PATH
+2,Environment Error,High,Install Python or fix PATH
+3,Success,None,No action required
+4,Environment Error,High,Install Python or fix PATH
+5,Environment Error,High,Install Python or fix PATH
+6,Environment Error,High,Install Python or fix PATH
+7,Success,Low,Jenkins build processed automatically
+8,Success,Low,Build #1 processed
+9,Success,Low,Build #2 processed
+10,Success,Low,Build #1 processed automatically
+11,Success,Low,Build #2 processed automatically
