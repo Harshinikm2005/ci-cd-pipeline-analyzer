@@ -1,10 +1,12 @@
-# Smart CI/CD Pipeline Analyzer
+# 🚀 Smart CI/CD Pipeline Analyzer
 
-## Project Overview
+## 📖 Project Overview
 
-A DevOps-focused project that automatically analyzes Jenkins build logs, classifies failures, stores results in a database, and provides an interactive dashboard for faster troubleshooting and monitoring.
+A DevOps-focused project that automatically analyzes Jenkins build logs, classifies build results, stores them in a SQLite database, provides AI-based error suggestions, exports CSV reports, and visualizes build analytics through an interactive Streamlit dashboard. The application is Dockerized for consistent deployment across different environments.
 
-## Technologies Used
+---
+
+## 🛠 Technologies Used
 
 * Linux
 * Git & GitHub
@@ -15,7 +17,9 @@ A DevOps-focused project that automatically analyzes Jenkins build logs, classif
 * Streamlit
 * Pandas
 
-## Features Completed
+---
+
+## ✅ Features Completed
 
 ### Week 1
 
@@ -59,44 +63,89 @@ A DevOps-focused project that automatically analyzes Jenkins build logs, classif
 * Dashboard Integration with Jenkins Data
 * Automated Build Monitoring Workflow
 
-## Project Architecture
+### Week 5
 
+* AI-Based Error Suggestion Engine
+* Automatic Error Detection and Suggestions
+* Build Analytics
+* Build Category Distribution
+* CSV Report Generation
+* Downloadable CSV Reports
+* Enhanced Dashboard Analytics
+* Build Monitoring Improvements
+
+### Week 6
+
+* Dockerized Streamlit Application
+* Dockerfile and Docker Compose Support
+* Improved Dashboard User Interface
+* Project Architecture Documentation
+* Workflow Documentation
+* Professional README
+* Resume & Portfolio Ready Project
+* Interview & Viva Preparation
+* Final Project Testing and Release
+
+---
+
+## 🏗 Project Architecture
+
+```text
 Jenkins Build
-
-↓
-
+      │
+      ▼
 Build Logs
-
-↓
-
+      │
+      ▼
 Python Log Analyzer
-
-↓
-
+      │
+      ▼
 Error Classification
-
-↓
-
+      │
+      ▼
 SQLite Database
-
-↓
-
+      │
+      ▼
 Streamlit Dashboard
+      │
+      ▼
+CSV Reports & Analytics
+```
 
-↓
+---
 
-Reports & Visualizations
+## 📂 Project Structure
 
-## Future Enhancements
+```text
+ci-cd-analyzer/
+├── database/
+├── diagrams/
+├── logs/
+├── reports/
+├── screenshots/
+├── scripts/
+├── dashboard.py
+├── app.py
+├── Dockerfile
+├── requirements.txt
+├── README.md
+└── .dockerignore
+```
 
-* AI-Based Fix Suggestions
-* Failure Trend Analysis
-* Grafana Visualization
-* Dockerized Application
-* AWS Deployment
-* Email Alerts
+---
+
+## 🚀 Future Enhancements
+
+* Grafana Dashboard Integration
+* AWS Cloud Deployment
+* Email Notifications
 * Telegram Notifications
+* Multi-Project Jenkins Monitoring
+* Real-Time Jenkins API Integration
+* Predictive Failure Analysis
 
-## Author
+---
+
+## 👩‍💻 Author
 
 **Harshini**
